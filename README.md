@@ -1,4 +1,4 @@
-# csh_ldap
+# csh-ldap
 
 [![PyPI version](https://badge.fury.io/py/csh_ldap.svg)](https://badge.fury.io/py/csh_ldap)
 [![Build Status](https://travis-ci.org/liam-middlebrook/csh_ldap.svg?branch=master)](https://travis-ci.org/liam-middlebrook/csh_ldap)
@@ -8,7 +8,7 @@ Python 3 ORM for CSH LDAP
 
 ## Installation
 
-`pip install csh_ldap`
+`pip install csh-ldap`
 
 
 ## Usage

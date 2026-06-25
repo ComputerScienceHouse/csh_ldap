@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+2.5.4
+---
+* bump: 2.5.4
+* feat: added methods to get member data while combining groups (#44)
+* Fix subgroups (#43)
+* Encode LDAP attributes as UTF-8 instead of ASCII
+
 2.5.3
 -----
 
