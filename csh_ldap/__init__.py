@@ -157,6 +157,12 @@ class CSHLDAP:
         excluded_groups -- the groups members cannot be a part of
         """
 
+        if groups is None:
+            groups = []
+
+        if excluded_groups is None:
+            excluded_groups = []
+
         group_dns = [f"(memberOf=cn={group},cn=groups,cn=accounts,dc=csh,dc=rit,dc=edu)" for group in groups]
         excluded_group_dns = [
             f"(memberOf=cn={group},cn=groups,cn=accounts,dc=csh,dc=rit,dc=edu)"
@@ -196,6 +202,12 @@ class CSHLDAP:
         if attributes is None:
             attributes = ['uid']
 
+        if groups is None:
+            groups = []
+
+        if excluded_groups is None:
+            excluded_groups = []
+
         query_result = self.__con__.search_s(
             "dc=csh,dc=rit,dc=edu",
             ldap.SCOPE_SUBTREE,
@@ -224,6 +236,12 @@ class CSHLDAP:
         excluded_groups -- the groups members cannot be a part of
         """
 
+        if groups is None:
+            groups = []
+
+        if excluded_groups is None:
+            excluded_groups = []
+
         query_result = self.__con__.search_s(
             "dc=csh,dc=rit,dc=edu",
             ldap.SCOPE_SUBTREE,
@@ -243,6 +261,12 @@ class CSHLDAP:
         groups -- the groups members must be a member of
         excluded_groups -- the groups members cannot be a part of
         """
+
+        if groups is None:
+            groups = []
+
+        if excluded_groups is None:
+            excluded_groups = []
 
         query_result = self.__con__.search_s(
             "dc=csh,dc=rit,dc=edu",
