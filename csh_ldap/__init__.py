@@ -149,7 +149,7 @@ class CSHLDAP:
                           True)
                 for dn in ret]
 
-    def get_query_for_groups(self, groups = None, excluded_groups = None):
+    def get_query_for_groups(self, groups = [], excluded_groups = []):
         """Returns the ldap query string to get members in groups but not in others
 
         Argumenets:
@@ -182,7 +182,7 @@ class CSHLDAP:
 
         return query
 
-    def get_group_member_attributes(self, groups = None, excluded_groups = None, attributes = None):
+    def get_group_member_attributes(self, groups = [], excluded_groups = [], attributes = ['uid']):
         """Returns a list of dicts containing all the attributes requested in the groups listed in groups, 
             but not in exlcuded_groups
 
@@ -216,7 +216,7 @@ class CSHLDAP:
 
         return result
 
-    def get_group_member_uids(self, groups = None, excluded_groups = None):
+    def get_group_member_uids(self, groups = [], excluded_groups = []):
         """Get a list of member uids in a group
 
         Arguements:
@@ -236,7 +236,7 @@ class CSHLDAP:
             if not member[1] == {} and "cn=users" in member[0]
         ]
 
-    def get_group_member_uuids(self, groups = None, excluded_groups = None):
+    def get_group_member_uuids(self, groups = [], excluded_groups = []):
         """Get a list of member uuids in a group (ipaUniqueId)
 
         Arguements:
