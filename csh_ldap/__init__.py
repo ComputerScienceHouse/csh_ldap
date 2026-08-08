@@ -34,6 +34,7 @@ class CSHLDAP:
             try:
                 self.__con__ = ReconnectLDAPObject(uri)
                 self.server_uri = uri
+                break
             except (ldap.SERVER_DOWN, ldap.TIMEOUT):
                 continue
 

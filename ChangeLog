@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+v2.5.7
+------
+
+* bump: 2.5.7
+* fix: fetch depth for pypi release
 * fix: default values for the attributes it used to not work with None
 * feat: pypi release workflow
 
